@@ -386,6 +386,9 @@ int esGenSphere ( int numSlices, float radius, float **vertices, float **normals
 }
 
 - (void)update {
+	
+	//https://stackoverflow.com/questions/8364664/isolate-and-remove-horizontal-rotation-from-coremotions-attitudes-rotationmatr
+	
 	float aspect = fabs(self.view.bounds.size.width / self.view.bounds.size.height);
 	
 	GLKMatrix4 deviceMotionAttitudeMatrix;
@@ -406,11 +409,16 @@ int esGenSphere ( int numSlices, float radius, float **vertices, float **normals
 	
 	GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;
 	modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, 300.0, 300.0, 300.0);
+	
 	if(_isUsingMotion) {
+		
 		CMDeviceMotion *d = _motionManager.deviceMotion;
+		
 		if (d != nil) {
+			
 			CMAttitude *attitude = d.attitude;
 			
+			// Rotate to match video to device orientation
 			modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, deviceOrientationRadians, 0.0f, 0.0f, 1.0f);
 			
 #if SHOW_DEBUG_LABEL
@@ -426,8 +434,6 @@ int esGenSphere ( int numSlices, float radius, float **vertices, float **normals
 							 a.m13, a.m23, a.m33, 0.0f,
 							 0.0f, 0.0f, 0.0f, 1.0f);
 			
-//			deviceMotionAttitudeMatrix = GLKMatrix4Scale(deviceMotionAttitudeMatrix, 300.0, 300.0, 300.0);
-			
 			modelViewMatrix = GLKMatrix4Multiply(modelViewMatrix, deviceMotionAttitudeMatrix);
 		}
 		
@@ -437,6 +443,8 @@ int esGenSphere ( int numSlices, float radius, float **vertices, float **normals
 	}
 	
 	_modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
+	
+	// Rotations to get the image right side up
 	_modelViewProjectionMatrix =GLKMatrix4Rotate(_modelViewProjectionMatrix, M_PI_2, 0.0f, 0.0f, 1.0f);
 	_modelViewProjectionMatrix =GLKMatrix4Rotate(_modelViewProjectionMatrix, M_PI_2, 1.0f, 0.0f, 0.0f);
 	_modelViewProjectionMatrix =GLKMatrix4Rotate(_modelViewProjectionMatrix, M_PI, 1.0f, 0.0f, 1.0f);
