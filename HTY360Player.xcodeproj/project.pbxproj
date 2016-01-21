@@ -174,7 +174,7 @@
 				TargetAttributes = {
 					4051089A1BEF7E3C003BCFF7 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = R8WZ7ZG3LA;
+						DevelopmentTeam = QNLG6762Z6;
 					};
 				};
 			};
@@ -350,7 +350,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hanton.360player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d9cbbedc-12b4-419b-8e95-ede70b061a48";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
