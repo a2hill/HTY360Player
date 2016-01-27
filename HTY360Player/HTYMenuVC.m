@@ -35,7 +35,8 @@
 #pragma mark button management
 
 - (IBAction)playDemo:(id)sender {
-  [self launchVideoWithName:@"demo"];
+//  [self launchVideoWithName:@"demo"];
+	[self launchVideoWithName:@"drone-demo"];
 }
 
 - (IBAction)playFile:(id)sender {

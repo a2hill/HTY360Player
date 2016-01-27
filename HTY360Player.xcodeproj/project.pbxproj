@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3212E5F61C5968F800E29293 /* drone-demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3212E5F51C5968F800E29293 /* drone-demo.mp4 */; };
 		405108A01BEF7E3C003BCFF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4051089F1BEF7E3C003BCFF7 /* main.m */; };
 		405108A31BEF7E3C003BCFF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 405108A21BEF7E3C003BCFF7 /* AppDelegate.m */; };
 		405108AB1BEF7E3C003BCFF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 405108AA1BEF7E3C003BCFF7 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3212E5F51C5968F800E29293 /* drone-demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "drone-demo.mp4"; sourceTree = "<group>"; };
 		4051089B1BEF7E3C003BCFF7 /* HTY360Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTY360Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4051089F1BEF7E3C003BCFF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		405108A11BEF7E3C003BCFF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		4051089E1BEF7E3C003BCFF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3212E5F51C5968F800E29293 /* drone-demo.mp4 */,
 				4051089F1BEF7E3C003BCFF7 /* main.m */,
 				405108D01BEF8BBB003BCFF7 /* demo.mp4 */,
 			);
@@ -208,6 +211,7 @@
 				405108D11BEF8C6D003BCFF7 /* demo.mp4 in Resources */,
 				405108BC1BEF7F32003BCFF7 /* HTY360PlayerVC.xib in Resources */,
 				405108CC1BEF8B18003BCFF7 /* Shader.vsh in Resources */,
+				3212E5F61C5968F800E29293 /* drone-demo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
