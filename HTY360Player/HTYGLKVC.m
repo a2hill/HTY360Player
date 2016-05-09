@@ -439,7 +439,7 @@ int esGenSphere ( int numSlices, float radius, float **vertices, float **normals
 		
 	} else {
 		modelViewMatrix = GLKMatrix4RotateX(modelViewMatrix, _fingerRotationX);
-		modelViewMatrix = GLKMatrix4RotateY(modelViewMatrix, _fingerRotationY);
+		modelViewMatrix = GLKMatrix4RotateZ(modelViewMatrix, -_fingerRotationY);
 	}
 	
 	_modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
